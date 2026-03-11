@@ -58,6 +58,16 @@ impl ApplicationHandler for App {
                     window.request_redraw();
                 }
             }
+            WindowEvent::MouseInput {
+                device_id,
+                state,
+                button,
+            } => {
+                println!("Mouse Input received");
+                dbg!(device_id);
+                dbg!(state);
+                dbg!(button);
+            }
             _ => {}
         }
     }
